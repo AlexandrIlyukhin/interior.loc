@@ -18,6 +18,10 @@ module.exports = {
             width: "768px",
             fields: "15px"
         },
+        xls: {
+            width: "600px",
+            fields: "15px"
+        },
         xss: {
             width: "500px",
             fields: "15px"

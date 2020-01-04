@@ -4,6 +4,7 @@
 @break_lg: 1100px;
 @break_sm: 880px;
 @break_xs: 768px;
+@break_xls: 600px;
 @break_xss: 500px;
 @break_xxs: 400px;
 
@@ -11,6 +12,7 @@
 @offset_lg: @offset;
 @offset_sm: @offset;
 @offset_xs: @offset;
+@offset_xls: @offset;
 @offset_xss: @offset;
 @offset_xxs: @offset;
 
@@ -18,11 +20,13 @@
 @offset_lg_one_side: (@offset_lg / 2);
 @offset_sm_one_side: (@offset_sm / 2);
 @offset_xs_one_side: (@offset_xs / 2);
+@offset_xls_one_side: (@offset_xls / 2);
 @offset_xss_one_side: (@offset_xss / 2);
 @offset_xxs_one_side: (@offset_xxs / 2);
 
 @fields: 30px;
 @fields_xs: 15px;
+@fields_xls: 15px;
 @fields_xss: 15px;
 @fields_xxs: 15px;
 
@@ -33,6 +37,11 @@
     .xs-block({
         padding-left: @fields_xs;
         padding-right: @fields_xs;
+    });
+
+    .xls-block({
+        padding-left: @fields_xls;
+        padding-right: @fields_xls;
     });
 
     .xss-block({
@@ -115,6 +124,11 @@
 .size-xs(@n){
     @val: 100% / @columns * @n;
     .xs(width, ~"calc(@{val} - @{offset_xs})");
+}
+
+.size-xls(@n){
+    @val: 100% / @columns * @n;
+    .xls(width, ~"calc(@{val} - @{offset_xls})");
 }
 
 .size-xss(@n){
@@ -255,6 +269,38 @@
     .xs(padding-right, ~"calc(@{val} + @{offset_xs_one_side})");
 }
 
+.shift-xls(@n){
+    @val: 100% / @columns * @n;
+    .xls(margin-left, ~"calc(@{val} + @{offset_xls_one_side})");
+    .xls(margin-right, ~"calc(@{val} + @{offset_xls_one_side})");
+}
+
+.shift-xls-left(@n){
+    @val: 100% / @columns * @n;
+    .xls(margin-left, ~"calc(@{val} + @{offset_xls_one_side})");
+}
+
+.shift-xls-right(@n){
+    @val: 100% / @columns * @n;
+    .xls(margin-right, ~"calc(@{val} + @{offset_xls_one_side})");
+}
+
+.shift-xls-padding(@n){
+    @val: 100% / @columns * @n;
+    .xls(padding-left, ~"calc(@{val} + @{offset_xls_one_side})");
+    .xls(padding-right, ~"calc(@{val} + @{offset_xls_one_side})");
+}
+
+.shift-xls-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .xls(padding-left, ~"calc(@{val} + @{offset_xls_one_side})");
+}
+
+.shift-xls-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .xls(padding-right, ~"calc(@{val} + @{offset_xls_one_side})");
+}
+
 .shift-xss(@n){
     @val: 100% / @columns * @n;
     .xss(margin-left, ~"calc(@{val} + @{offset_xss_one_side})");
@@ -351,6 +397,18 @@
 
 .xs-block(@content){
     @media screen and (max-width: @break_xs){
+        @content();
+    }
+}
+
+.xls(@name, @value){
+    @media screen and (max-width: @break_xls){
+        @{name}: @value;
+    }
+}
+
+.xls-block(@content){
+    @media screen and (max-width: @break_xls){
         @content();
     }
 }

@@ -337,6 +337,7 @@ h1 {
     .second_text {
       color: @color_text;
       font-size: 17px;
+      .xs-block({ font-size: 15px; line-height: 19px; });
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
       font-style: normal;
@@ -377,6 +378,15 @@ h1 {
     .item {
       .col();
       .size(3);
+      .lg-block({ .size(6); &:nth-child(n+3) {
+        margin-top: 5px;
+      } }
+      );
+      .xls-block({ display: flex; justify-items: center; align-items: center; padding: 1rem; .size(12); &:nth-child(n+2) {
+        margin-top: 5px;
+      } });
+      display: flex;
+      flex-direction: column;
 
       position: relative;
       &:first-child {
@@ -394,6 +404,7 @@ h1 {
         outline-offset: -3px;
 
       }
+
       padding: 4rem;
       .service-title {
         color: @color_bg;
@@ -401,9 +412,20 @@ h1 {
       }
       .service-text {
         color: @color_dark;
+        margin-top: auto;
       }
+      .xls-block({ .service-title, .service-text {
+        display: none;
+      } &:nth-child(n) {
+          background: @color_bg;
+          outline: 3px solid #dcd9d6;
+          outline-offset: -3px;
+        } });
       .btn-bloc {
         display: flex;
+        a {
+          text-decoration: none;
+        }
 
         a:hover {
           border: none;
@@ -411,6 +433,14 @@ h1 {
 
         .btn {
           opacity: 0;
+        }
+        .btn-button {
+          display: none;
+          .xls-block({ display: block; text-decoration: none; font-size: 20px; text-transform: uppercase; font-family: 'Open Sans', sans-serif; font-weight: 400; font-style: normal; text-align: center; color: @color_dark_grey; background: @color_bg; &:hover {
+            border: none;
+            background: @color_bg;
+          } });
+          .xss-block({ font-size: 1rem; });
         }
 
         .btn {
@@ -425,6 +455,7 @@ h1 {
           //.xss-block({ padding: 0.8rem 3rem; margin: 0 auto; });
           background: @color_bg;
           border: @color_bg 1px solid;
+          .xls-block({ display: none });
         }
 
         :hover {
@@ -451,6 +482,7 @@ h1 {
       &:last-child {
         .btn-bloc .btn {
           display: inline-block;
+          .xls-block({ display: none });
           max-width: 180px;
           padding: 0;
           margin-left: -89px;
