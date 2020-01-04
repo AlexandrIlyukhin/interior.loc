@@ -378,8 +378,6 @@ h1 {
       .col();
       .size(3);
 
-
-
       position: relative;
       &:first-child {
         background: #c4bfbc;
@@ -407,13 +405,15 @@ h1 {
       .btn-bloc {
         display: flex;
 
-        .btn {
-          opacity: 0;
-
+        a:hover {
+          border: none;
         }
 
         .btn {
+          opacity: 0;
+        }
 
+        .btn {
           position: absolute;
           //margin: auto;
           top: 50%;
@@ -431,7 +431,7 @@ h1 {
           background: @color_grey;
           border: @color_grey 1px solid;
           color: @color_bg;
-          cursor: pointer;
+          //cursor: pointer;
           transition: all 0.3s ease;
         }
       }
@@ -467,7 +467,6 @@ h1 {
             background: @color_bg;
             border: @color_bg 1px solid;
             color: @color_dark_grey;
-
           }
         }
       }
