@@ -40,6 +40,12 @@ h3 {
   font-style: normal;
 }
 
+h4 {
+  font-size: 1.3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
 /*Логотип и меню с кнпками*/
 .header {
 
@@ -511,7 +517,7 @@ h1 {
   .wrapper();
   .space-text {
     max-width: 540px;
-    margin: 70px auto;
+    margin: 110px auto;
     text-align: center;
     font-size: 2.5rem;
     line-height: 50px;
@@ -527,7 +533,80 @@ h1 {
     });
   }
 }
+/*Предложение к сотрудничеству*/
+.start-ready {
+  .wrapper();
+  padding: 30px 0;
+  background: @color_rgb;
+  margin-top: 5px;
 
+  .title {
+    font-family: 'Optima', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: @color_bg;
+    letter-spacing: 0;
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    .lg-block({
+      max-width: 60%;
+    });
+    .xs-block({max-width: 80%});
+    .xls-block({ font-size: 22px;});
+  }
+
+  .text {
+    text-align: center;
+    margin-top: 30px;
+    color: @color_dark;
+    font-family: 'Optima', sans-serif;
+    line-height: 1.40;
+    letter-spacing: 0;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+    .lg-block({
+      max-width: 60%;
+    });
+    .xs-block({max-width: 80%});
+    .xls-block({ font-size: 14px;});
+  }
+
+  .btn-bloc {
+    display: flex;
+
+    .btn {
+      margin-top: 32px;
+      color: @color_dark_grey;
+      padding: 1rem 1rem;
+      margin-right: auto;
+      margin-left: auto;
+
+      .xss-block({ padding: .8rem 1rem;
+        font-size: 1rem;
+       /* margin: 30px auto;*/
+        margin-top: 32px;
+      margin-right: auto;
+      margin-left: auto;
+
+      });
+      background: @color_bg;
+      border: @color_bg 1px solid;
+
+    }
+    :hover {
+      background: @color_grey;
+      border: @color_grey 1px solid;
+      color: @color_bg;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  }
+
+
+}
 
 
 
