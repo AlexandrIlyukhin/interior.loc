@@ -46,6 +46,7 @@ h4 {
   font-weight: normal;
   font-style: normal;
 }
+
 /*Логотип и меню с кнпками*/
 .header {
 
@@ -525,14 +526,11 @@ h1 {
     font-weight: normal;
     font-style: normal;
     color: @color_grey;
-    .xs-block({
-    margin: 50px auto; font-size: 2rem; line-height: 40px;
-    });
-    .xls-block({
-    display: none;
-    });
+    .xs-block({ margin: 50px auto; font-size: 2rem; line-height: 40px; });
+    .xls-block({ display: none; });
   }
 }
+
 /*Предложение к сотрудничеству*/
 .start-ready {
   .wrapper();
@@ -550,11 +548,9 @@ h1 {
 
     margin-left: auto;
     margin-right: auto;
-    .lg-block({
-      max-width: 60%;
-    });
-    .xs-block({max-width: 80%});
-    .xls-block({ font-size: 22px;});
+    .lg-block({ max-width: 60%; });
+    .xs-block({ max-width: 80% });
+    .xls-block({ font-size: 22px; });
   }
 
   .text {
@@ -567,11 +563,9 @@ h1 {
     font-weight: 400;
     margin-left: auto;
     margin-right: auto;
-    .lg-block({
-      max-width: 60%;
-    });
-    .xs-block({max-width: 80%});
-    .xls-block({ font-size: 14px;});
+    .lg-block({ max-width: 60%; });
+    .xs-block({ max-width: 80% });
+    .xls-block({ font-size: 14px; });
   }
 
   .btn-bloc {
@@ -584,14 +578,7 @@ h1 {
       margin-right: auto;
       margin-left: auto;
 
-      .xss-block({ padding: .8rem 1rem;
-        font-size: 1rem;
-       /* margin: 30px auto;*/
-        margin-top: 32px;
-      margin-right: auto;
-      margin-left: auto;
-
-      });
+      .xss-block({ padding: .8rem 1rem; font-size: 1rem; /* margin: 30px auto;*/ margin-top: 32px; margin-right: auto; margin-left: auto; });
       background: @color_bg;
       border: @color_bg 1px solid;
 
@@ -605,9 +592,98 @@ h1 {
     }
   }
 
-
 }
 
+/*Изучите наши проекты Банер*/
+.explorer {
+  .wrapper();
+  padding-top: 134px;
+  padding-bottom: 99px;
+  .projects {
+    font-family: 'Optima', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: @color_dark;
+    letter-spacing: 0;
+    font-size: 22px;;
+  }
+  .project {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #757171;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*Лучшие проекты*/
+.top-projects {
+  .wrapper();
+  .items {
+    .row-flex();
+  }
+  .item {
+    .col();
+    .size(3);
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    &:hover {
+      :before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: auto;
+        height: 100%;
+        background: #FF0000;
+
+      /*img::after {
+        position: absolute;
+        width: 100%; 
+        height: 100%; 
+        content: "";
+        top: 0;
+        left: 0;
+        //position: absolute;
+        background: #000;*/
+      }
+      .item-text {
+        background: rgba(78, 79, 83, 0.2);
+      }
+    }
+
+    .item-text {
+      font-family: 'Optima', sans-serif;
+      font-style: normal;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 400;
+      text-align: center;
+      //max-width: 300px;
+      font-size: 18px;
+      padding: 10px 0;
+      line-height: 1.40;
+      letter-spacing: 0;
+      background: #cbc4bd;
+      transition: .4s ease-in-out;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+    }
+    .btn-bloc {
+      display: none;
+    }
+
+  }
+}
+
+/*TODO решить вопрос с фоном всплывающим над картинкой*/
 
 
 
