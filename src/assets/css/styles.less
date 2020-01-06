@@ -632,27 +632,24 @@ h1 {
     position: relative;
     margin-top: 0;
     margin-bottom: 0;
-    &:hover {
-      :before {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: auto;
-        height: 100%;
-        background: #FF0000;
 
-      /*img::after {
-        position: absolute;
-        width: 100%; 
-        height: 100%; 
-        content: "";
-        top: 0;
-        left: 0;
-        //position: absolute;
-        background: #000;*/
+
+    &:hover {
+
+      &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+        transition: .4s ease-in-out;
+        background: rgba(78, 79, 83, 0.4);
       }
       .item-text {
         background: rgba(78, 79, 83, 0.2);
+
       }
     }
 
