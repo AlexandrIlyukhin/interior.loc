@@ -107,7 +107,7 @@ $(document).ready(function () {
 
     });*/
     $taBl.on('click', function () {
-        let $navNavS = $(this).children('.nav-2')
+        let $navNavS = $(this).children('.nav-2');
         $navNavS.stop(true).slideToggle(400);
         $('.nav-2').not($navNavS).stop(true).slideUp(400);
         $taBl.parent().find('.nav-arrow').removeClass('arrow-border');
@@ -188,7 +188,18 @@ $(document).ready(function () {
         animateIn: "slideInDown"
 
     });
+    $(".slide-three").owlCarousel({
+        //center: true,
+        items: 1,
+        loop: true,
+        autoplay: true,
+        center: true,
+        touchDrag: true
+        //autoplayTimeout: 2000,
+        //smartSpeed: 2000,
 
+
+    });
 });
 
 

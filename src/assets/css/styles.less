@@ -748,7 +748,104 @@ h1 {
   }
 }
 
+.different {
+.wrapper();
+  margin-top: 134px;
+  margin-bottom: 100px;
 
+  .different-text {
+    text-align: center;
+    font-family: 'Optima', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    color: #757171;
+    margin-top: 20px;
+    line-height: 1.40;
+  }
+
+  .different-img {
+    padding-top: 64px;
+    max-width: 90px;
+    margin: 0 auto;
+    .different-img_img {
+      border-radius: 45px;
+    }
+  }
+
+  .text-recommend {
+    text-align: center;
+    max-width: 630px;
+    margin: 0 auto;
+    color: @color_grey;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 35px;
+    margin-top: 30px
+  }
+
+  .initials-title {
+    text-align: center;
+    color: @color_dark;
+    font-size: 20px;
+    font-family: 'Optima', sans-serif;
+    font-weight: 400;
+    margin-top: 20px;
+
+  }
+
+  .client {
+    text-align: center;
+    color: #757171;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .btn-bloc {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+
+
+    //vertical-align: middle;
+    transition: all 0.3s ease;
+
+    a {
+      border: none;
+      &:hover {
+        border: none
+      }
+    }
+    .btn {
+      display: inline-block;
+      color: @color_dark_grey;
+      padding: 1rem 1rem;
+      background: #cbc4bd;
+      border: #cbc4bd 1px solid;
+      font-family: 'Optima', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      text-transform: uppercase;
+      .sm-block({
+        font-size: 13px;
+      });
+      &:hover {
+        background: @color_bg;
+        border: @color_bg 1px solid;
+        color: @color_dark_grey;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+
+
+}
 
 
 
