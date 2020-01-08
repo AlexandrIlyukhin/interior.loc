@@ -633,18 +633,9 @@ h1 {
   .item {
     .col();
     .size(3);
-    .sm-block({
-      .size(6);
-    max-height: 280px;
-    margin-bottom: 5px;
-    });
-    .xls-block({
-    max-height: 215px;
-    });
-    .xxs-block({
-    .size(12);
-    max-height: 240px;
-    });
+    .sm-block({ .size(6); max-height: 280px; margin-bottom: 5px; });
+    .xls-block({ max-height: 215px; });
+    .xxs-block({ .size(12); max-height: 240px; });
     position: relative;
     margin-top: 0;
     margin-bottom: 0;
@@ -689,8 +680,7 @@ h1 {
       position: absolute;
       bottom: 0;
       width: 100%;
-      .sm-block({ font-size: 13px;
-      });
+      .sm-block({ font-size: 13px; });
 
     }
     .btn-bloc {
@@ -701,10 +691,7 @@ h1 {
       left: 50%;
       margin-top: -25px;
       margin-left: -64px;
-      .sm-block({
-        margin-top: -23px;
-        margin-left: -55px;
-      });
+      .sm-block({ margin-top: -23px; margin-left: -55px; });
       z-index: 2;
       //vertical-align: middle;
       transition: all 0.3s ease;
@@ -727,9 +714,7 @@ h1 {
         font-weight: 400;
         font-size: 16px;
         text-transform: uppercase;
-        .sm-block({
-        font-size: 13px;
-        });
+        .sm-block({ font-size: 13px; });
         &:hover {
           background: @color_bg;
           border: @color_bg 1px solid;
@@ -741,15 +726,18 @@ h1 {
 
     }
     &:hover {
-      .btn-bloc {display: block;
-        transition: all 0.3s ease;}
+      .btn-bloc {
+        display: block;
+        transition: all 0.3s ease;
+      }
 
     }
   }
 }
 
+/*Отзывы о Катюше*/
 .different {
-.wrapper();
+  .wrapper();
   margin-top: 134px;
   margin-bottom: 100px;
 
@@ -792,6 +780,7 @@ h1 {
     font-family: 'Optima', sans-serif;
     font-weight: 400;
     margin-top: 20px;
+    text-transform: uppercase;
 
   }
 
@@ -808,7 +797,6 @@ h1 {
     display: block;
     text-align: center;
     margin-top: 30px;
-
 
     //vertical-align: middle;
     transition: all 0.3s ease;
@@ -830,9 +818,7 @@ h1 {
       font-weight: 400;
       font-size: 16px;
       text-transform: uppercase;
-      .sm-block({
-        font-size: 13px;
-      });
+      .sm-block({ font-size: 13px; });
       &:hover {
         background: @color_bg;
         border: @color_bg 1px solid;
@@ -842,12 +828,122 @@ h1 {
       }
     }
   }
-
-
-
 }
 
+/*Задать вопрос-общение*/
+.question-got {
+  .wrapper();
+  display: flex;
+  .xs-block({
+    flex-direction: column;
+  });
+  .question-img {
 
+    margin: 0 2.5px;
+    .xs-block({
+      margin: 0;
+    });
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+  .contact_form {
+    background: #dcd9d6;
+    width: calc(33% - 2.5px);
+    .lg-block({
+      width: calc(55% - 2.5px);
+    });
+    .sm-block({
+      width: calc(70% - 2.5px);
+    });
+
+    margin: 0 2.5px;
+    .xs-block({
+      width: calc(100%);
+      margin: 0;
+    });
+    padding: 40px 40px 40px 15px;
+
+    .title-text {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      text-align: center;
+      font-size: 24px;
+      color: @color_bg;
+      text-transform: uppercase;
+    }
+    .required {
+      text-align: center;
+      font-weight: normal;
+      color: @color_dark;
+      margin-top: 20px;
+      font-size: 15px;
+      margin-bottom: 32px;
+    }
+    input {
+      height: 2.8rem;
+      padding-left: 10px;
+      box-shadow: none;
+      margin-top: 0;
+    }
+    input, textarea {
+      width: 100%;
+      padding-left: 10px;
+      box-shadow: none;
+      margin-top: 0;
+      outline: none;
+    }
+    textarea {
+      padding: 10px;
+
+    }
+    input:focus, textarea:focus {
+      outline: none;
+    }
+    .item {
+      margin-top: 15px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 35px;
+      color: #777777;
+      span {
+
+      }
+      label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4px;
+        margin-right: 24px;
+      }
+      #check1, #check2 {
+        border-color: #e8e5e1;
+        width: 12.8px;
+      }
+    }
+  }
+  .submit {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+
+    font-family: 'Optima', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 17px;
+    color: @color_dark;
+
+    outline: none;
+  }
+
+}
 
 
 
